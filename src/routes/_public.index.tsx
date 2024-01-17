@@ -1,6 +1,6 @@
 import { FormEventHandler } from 'react'
 import { FileRoute } from '@tanstack/react-router'
-import useSignIn from 'react-auth-kit/hooks/useSignIn'
+import { useSignIn } from 'react-auth-kit'
 import { login } from '@/auth/service'
 
 export const Route = new FileRoute('/_public/').createRoute({
@@ -28,12 +28,10 @@ function IndexComponent() {
     if (!data) return
 
     const isSignedIn = signIn({
-      auth: {
-        token: data.accessToken.token,
-        type: 'Bearer',
-      },
-      // refresh: data.refreshToken,
-      userState: data.admin,
+      token: data.accessToken.token,
+      tokenType: 'Bearer',
+      authState: data.admin,
+      expiresIn: 60 * 8,
     })
 
     console.log({ isSignedIn })

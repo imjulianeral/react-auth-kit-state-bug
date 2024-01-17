@@ -13,7 +13,7 @@
     "@tanstack/react-router": "^1.4.9",
     "@tanstack/router-vite-plugin": "^1.4.9",
     "react": "^18.2.0",
-    "react-auth-kit": "3.0.1",
+    "react-auth-kit": "2.12.7",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

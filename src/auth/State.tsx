@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import useIsAuthenticated from 'react-auth-kit/hooks/useIsAuthenticated'
+import { useIsAuthenticated } from 'react-auth-kit'
 
 export function AuthState() {
   const getAuthState = useIsAuthenticated()

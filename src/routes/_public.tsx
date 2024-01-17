@@ -1,5 +1,5 @@
 import { Outlet, FileRoute, Navigate } from '@tanstack/react-router'
-import useIsAuthenticated from 'react-auth-kit/hooks/useIsAuthenticated'
+import { useIsAuthenticated } from 'react-auth-kit'
 
 export const Route = new FileRoute('/_public').createRoute({
   component: LayoutComponent,
